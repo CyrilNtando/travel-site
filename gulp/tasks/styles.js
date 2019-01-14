@@ -4,6 +4,7 @@ var gulp = require("gulp"),
   cssvars = require("postcss-simple-vars"),
   nested = require("postcss-nested"),
   cssimport = require("postcss-import"),
+  mixins = require("postcss-mixins"),
   rename = require("gulp-rename");
 
 gulp.task("styles", function() {
@@ -15,7 +16,7 @@ gulp.task("styles", function() {
    *  */
   return gulp
     .src("./app/assets/styles/styles.pcss")
-    .pipe(postcss([cssimport, cssvars, nested, autoprefixer]))
+    .pipe(postcss([cssimport, mixins, cssvars, nested, autoprefixer]))
     .on("error", function(errorInfo) {
       console.log(errorInfo.toString());
       this.emit("end");

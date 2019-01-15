@@ -14,3 +14,12 @@
     @mixin-content;
   }
 }
+
+@define-mixin clearfix{
+   zoom: 1;
+    &::after{
+        content:"";
+        clear: both;
+        display:table;
+    }
+}

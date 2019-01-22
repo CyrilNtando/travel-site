@@ -5,9 +5,11 @@ var gulp = require("gulp"),
   nested = require("postcss-nested"),
   cssimport = require("postcss-import"),
   mixins = require("postcss-mixins"),
-  rename = require("gulp-rename");
+  rename = require("gulp-rename")
+  , hexrgba = require('postcss-hexrgba');
 
-gulp.task("styles", function() {
+
+gulp.task("styles", function () {
   /***
    * src points to the source file
    * -1. use pipe to autoprifix css styles
@@ -16,8 +18,8 @@ gulp.task("styles", function() {
    *  */
   return gulp
     .src("./app/assets/styles/styles.pcss")
-    .pipe(postcss([cssimport, mixins, cssvars, nested, autoprefixer]))
-    .on("error", function(errorInfo) {
+    .pipe(postcss([cssimport, mixins, cssvars, nested, hexrgba, autoprefixer]))
+    .on("error", function (errorInfo) {
       console.log(errorInfo.toString());
       this.emit("end");
     })

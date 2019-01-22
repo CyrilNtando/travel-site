@@ -15,6 +15,7 @@ gulp.task("watch", function() {
     browserSync.reload();
   });
   watch("./app/assets/styles/**/*.pcss", gulp.series("cssInject"));
+  watch("./app/assets/scripts/**/*.js", gulp.series("scriptsRefresh"));
 });
 
 // argument  middle tell gulp before running css must complete the following tasks
@@ -22,5 +23,12 @@ gulp.task(
   "cssInject",
   gulp.series("styles", function() {
     return gulp.src("./app/temp/styles/styles.css").pipe(browserSync.stream());
+  })
+);
+
+gulp.task(
+  "scriptsRefresh",
+  gulp.series("scripts", function() {
+    browserSync.reload();
   })
 );

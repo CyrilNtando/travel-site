@@ -11,19 +11,32 @@
 </head>
 
 <body>
-  <header>
-    <img src="assets/images/icons/clear-view-escapes.svg" />
-    <a class="btn" href="#">Get in Touch</a>
-    <nav>
-      <ul>
-        <li><a href="#our-beginning">Our Beginning</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="wrapper">
+      <div class="site-header__logo">
+        <img src="assets/images/icons/clear-view-escapes.svg" />
+      </div>
+
+      <div class="site-header__menu-icon">
+        <div class="site-header__menu-icon__middle"></div>
+      </div>
+      <div class="site-header__menu-content">
+        <div class="site-header__btn-container">
+          <a class="btn" href="#">Get in Touch</a>
+        </div>
+        <nav class="primary-nav primary-nav--pull-right">
+          <ul>
+            <li><a href="#our-beginning">Our Beginning</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <!----------------------HERO SECTION------------------->
+
   <div class="large-hero">
     <picture>
       <source srcset="assets/images/hero--large.jpg 1920w, assets/images/hero--large-hi-dpi.jpg 3840w" media="(min-width: 1380px)">
@@ -236,6 +249,8 @@
       </p>
     </div>
   </footer>
+
+  <script src="./temp/scripts/App.js"></script>
 </body>
 
 </html>

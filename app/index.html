@@ -8,6 +8,7 @@
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes,affordable travel" />
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you." />
   <link rel="stylesheet" href="temp/styles/styles.css" type="text/css">
+  <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
       </div>
       <div class="site-header__menu-content">
         <div class="site-header__btn-container">
-          <a class="btn" href="#">Get in Touch</a>
+          <a class="btn open-modal" href="#">Get in Touch</a>
         </div>
         <nav class="primary-nav primary-nav--pull-right">
           <ul>
@@ -50,7 +51,7 @@
         <h1 class="large-hero__title">Your clarity.</h1>
         <h2 class="large-hero__subtitle">One trip away.</h2>
         <p class="large-hero__description">We create soul restoring journeys that inspire you to be you.</p>
-        <p><a class="btn btn--orange btn--large" href="#">Get Started Today</a></p>
+        <p><a class="btn btn--orange btn--large open-modal" href="#">Get Started Today</a></p>
       </div>
     </div>
   </div>
@@ -245,10 +246,42 @@
     <div class="wrapper">
       <p>
         <span class="site-footer__text"> &copy; 2016 Clear View Escapes. All rights reserved.</span>
-        <a class="btn btn--orange" href="#">Get in Touch</a>
+        <a class="btn btn--orange open-modal" href="#">Get in Touch</a>
       </p>
     </div>
   </footer>
+
+  <div class="modal">
+   <div class="modal__inner">
+      <h2 class="section-title section-title--blue section-title--less-margin">
+          <img class="section-title__icon section-title--blue" src="assets/images/icons/mail.svg" />
+          Get in<strong> Touch</strong>
+        </h2>
+        <div class="wrapper wrapper--narrow">
+          <p class="modal__discription">We will have an online order system in place soon until then,
+            connect us on any of the platforms below</p>
+        </div>
+    
+        <div class="social-icons">
+          <a href="" class="social-icons__icon"> 
+            <i class="fab fa-facebook-square icon"></i> 
+          </a>
+          <a href="" class="social-icons__icon"> 
+            <i class="fab fa-twitter-square icon"></i>
+          </a>
+          <a href="" class="social-icons__icon"> 
+              <i class="fab fa-instagram icon"></i>
+            </a>
+          <a href="" class="social-icons__icon">
+            <i class="fab fa-youtube-square icon" aria-hidden="true"></i>
+          </a>
+    
+        </div>
+   </div>
+   <div class="modal__close">
+     X
+   </div>
+  </div>
 
   <script src="./temp/scripts/App.js"></script>
 </body>
